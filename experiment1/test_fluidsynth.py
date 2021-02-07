@@ -13,5 +13,15 @@ for n in range(42,68,2):
   time.sleep(c)
   p(f"noteoff 1 {n}")
   c += 0.025
-time.sleep(1)
+time.sleep(0.2)
+
+p("set synth.chorus.level 1")
+p("set synth.chorus.speed 2.5")
+p("set synth.chorus.active 1")
+p("set synth.reverb.room-size 0.5")
+p("set synth.reverb.active 1")
+p("noteon 1 55 80")
+time.sleep(2)
+p("noteoff 1 55 80")
+time.sleep(2)
 p("quit")
